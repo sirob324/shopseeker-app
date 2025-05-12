@@ -1,0 +1,7 @@
+__tests__
+.cache
+build
+android
+ios
+node_modules
+package-lock.json

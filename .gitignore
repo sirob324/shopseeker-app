@@ -1,0 +1,81 @@
+# OSX
+#
+.DS_Store
+.idea
+
+__tests__/*
+
+# Android/IntelliJ
+#
+android/.gradle
+android/.idea
+android/build/
+android/*.iml
+android/*.hprof
+android/local.properties
+android/app/build/
+android/app/release/
+android/app/*.iml
+android/app/*.bzl
+android/app/src/debug/
+android/app/src/main/res/raw/
+android/app/src/main/res/drawable*
+android/.project
+android/.settings/
+android/app/.classpath
+android/app/.project
+android/app/.settings/
+android/app/src/main/assets/index.android.bundle
+
+# Xcode
+#
+ios/assets/
+ios/build/
+ios/Pods/
+ios/Podfile.lock
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+ios/Podfile.lock
+ios/shopseeker/main.jsbundle
+
+.vscode/
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+
+coverage/
+
+# BUCK
+buck-out/
+.buckd/
+*.keystore
+!debug.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+
+.env

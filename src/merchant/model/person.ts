@@ -1,0 +1,166 @@
+import _ from "lodash";
+
+import Phone from "model/phone";
+import State from "model/country";
+import Postal from "model/postal";
+
+const Person = {
+    CA: {
+        first_name: {
+            type: "text",
+            name: "first_name",
+            trans: "input_first_name",
+            label_trans: "legalName",
+            required: true,
+        },
+        last_name: {
+            type: "text",
+            name: "last_name",
+            trans: "input_last_name",
+            required: true,
+        },
+        gender: {
+            type: "choices",
+            choices: {
+                female: "female",
+                male: "male",
+            },
+            name: "gender",
+            label_trans: "input_gender",
+            trans: "choose",
+            required: true,
+        },
+        relationship: {
+            type: "checkbox",
+            multiple: true,
+            name: "relationship",
+            label_trans: "input_relationship",
+            required: true,
+        },
+        percent_ownership: {
+            type: "number",
+            name: "percent_ownership",
+            label_trans: "input_percent_ownership",
+            placeholder: "100",
+            required: false,
+            show: false,
+        },
+        title: {
+            type: "text",
+            name: "title",
+            label_trans: "input_job_title",
+            placeholder: "CEO, Manager, Partner, Support Engineer...",
+            required: false,
+        },
+        email: {
+            type: "email",
+            name: "email",
+            label_trans: "input_email",
+            required: true,
+        },
+        phone: {
+            type: "mask",
+            mask: Phone.CA.mask,
+            placeholder: Phone.CA.placeholder,
+            name: "phone",
+            label_trans: "input_phone",
+            required: true,
+        },
+        dob: {
+            type: "mask",
+            mask: [
+                /[0-1]/,
+                /\d/,
+                "/",
+                /[0-3]/,
+                /\d/,
+                "/",
+                /[1-2]/,
+                /[0,9]/,
+                /\d/,
+                /\d/,
+            ],
+            placeholder: "MM/DD/YYYY",
+            name: "dob",
+            label_trans: "input_dob",
+            required: true,
+        },
+        id_number: {
+            type: "mask",
+            mask: [
+                /[0-9]/,
+                /[0-9]/,
+                /[0-9]/,
+                "-",
+                /[0-9]/,
+                /[0-9]/,
+                /[0-9]/,
+                "-",
+                /[0-9]/,
+                /[0-9]/,
+                /[0-9]/,
+            ],
+            placeholder: "123-456-789",
+            name: "id_number",
+            label_trans: "input_sin",
+            required: true,
+        },
+        line1: {
+            type: "text",
+            name: "line1",
+            label_trans: "input_address",
+            trans: "address_line1",
+            required: true,
+        },
+        line2: {
+            type: "text",
+            name: "line2",
+            trans: "address_line2",
+            required: false,
+        },
+        city: {
+            type: "text",
+            name: "city",
+            trans: "address_city",
+            required: true,
+        },
+        state: {
+            type: "choices",
+            choices: State.CA,
+            name: "state",
+            trans: "address_state",
+            required: true,
+        },
+        postal_code: {
+            type: "mask",
+            name: "postal_code",
+            placeholder: Postal.CA.placeholder,
+            mask: Postal.CA.mask,
+            required: true,
+        },
+        country: {
+            type: "text",
+            name: "country",
+            value: "CA",
+            trans: "address_country",
+            disabled: true,
+            required: true,
+        },
+        // front: {
+        //     className: "mb-2",
+        //     type: "file",
+        //     name: "verification_document_front",
+        //     label_trans: "input_verification_document_front",
+        //     required: false,
+        // },
+        // back: {
+        //     className: "mb-4",
+        //     type: "file",
+        //     name: "verification_document_back",
+        //     label_trans: "input_verification_document_back",
+        //     required: false,
+        // },
+    },
+};
+
+export default Person;
