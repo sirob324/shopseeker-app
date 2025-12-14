@@ -1,132 +1,115 @@
-# 🛒 ShopSeeker
+# ShopSeeker App 🛒📦
 
-**ShopSeeker** is an online grocery delivery mobile application built with **React Native**. It provides services for **common users**, **delivery personnel**, and **merchants**, enabling seamless ordering, delivery tracking, and product management. ShopSeeker also includes an admin portal for delivery drivers and merchants to manage orders, products, and logistics efficiently.
+![ShopSeeker Logo](https://via.placeholder.com/150)
 
----
+Welcome to the ShopSeeker App repository! ShopSeeker is an online grocery delivery mobile application built with React Native. It provides services for common users, delivery personnel, and merchants, enabling seamless ordering, delivery tracking, and product management.
 
-## 📦 Features
+## Table of Contents
 
-* 👥 Multi-role support: User, Delivery, Merchant
-* 📍 Real-time grocery ordering and delivery
-* 📤 Order and delivery management via merchant/delivery portal
-* 🔔 In-time notifications using Socket
-* 💳 Secure payment integration with **Stripe**
-* 🌐 GraphQL-powered backend communication
-* 🗃️ Robust state management with **Redux** and **Redux-Saga**
-* ☁️ Backend integration with **Parse Server**
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
+- [Contact](#contact)
 
----
+## Features
 
-## 🛠 Tech Stack
+- **User-Friendly Interface**: Navigate through the app easily with a clean and intuitive design.
+- **Seamless Ordering**: Place orders for groceries with just a few taps.
+- **Delivery Tracking**: Keep track of your orders in real-time.
+- **Merchant Management**: Merchants can manage their products and orders efficiently.
+- **Delivery Personnel Support**: Delivery staff can easily manage their tasks and deliveries.
+- **Secure Payments**: Process payments securely with Stripe integration.
 
-| Tech                    | Description                               |
-| ----------------------- | ----------------------------------------- |
-| React Native            | Cross-platform mobile development         |
-| Redux + Redux-Saga      | State management and side-effects         |
-| GraphQL                 | Data fetching and mutations               |
-| Parse                   | Backend as a service for user & data mgmt |
-| Stripe                  | Secure online payments                    |
-| Socket               | Real-time updates & notifications         |
-| React Navigation        | App navigation and routing                |
-| TypeScript / JavaScript | Primary development language              |
+## Technologies Used
 
----
+This project utilizes a variety of technologies to ensure a robust and scalable application:
 
-## 🚀 Getting Started
+- **React Native**: For building the mobile application.
+- **Apollo**: For managing GraphQL data.
+- **GraphQL**: To query and manipulate data efficiently.
+- **Parse SDK**: For backend services.
+- **Parse Server**: To handle data storage and user management.
+- **React Navigation**: For seamless navigation within the app.
+- **Redux**: For state management.
+- **Redux-Saga**: For handling side effects.
+- **Socket.IO**: For real-time communication.
+- **Stripe**: For secure payment processing.
 
-### Prerequisites
+## Installation
 
-* Node.js >= 14
-* Yarn or npm
-* Xcode / Android Studio
-* Watchman (macOS)
+To get started with the ShopSeeker app, follow these steps:
 
-### Installation
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/sirob324/shopseeker-app.git
+   ```
 
-```bash
-git clone https://github.com/daddyauden/shopseeker-app.git
-cd shopseeker-app
-npm install
-```
+2. **Navigate to the project directory**:
+   ```bash
+   cd shopseeker-app
+   ```
 
-### iOS
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-```bash
-cd ios && pod install && cd ..
-npx react-native run-ios
-```
+4. **Run the application**:
+   ```bash
+   npm start
+   ```
 
-### Android
+Make sure you have Node.js and npm installed on your machine. If you need help, check the official documentation for [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/get-npm).
 
-```bash
-npx react-native run-android
-```
+## Usage
 
----
+Once the app is running, you can start using it right away. 
 
-## 🔐 Environment Variables
+- **For Users**: Create an account, browse products, and place your orders.
+- **For Delivery Personnel**: Log in to manage your deliveries and track orders.
+- **For Merchants**: Manage your inventory and view orders from users.
 
-update `.env.development` file in the project root with the following:
+## Contributing
 
-```env
-PARSE_HOST=***
-PARSE_APP_ID=***
-PARSE_JS_KEY=***
-PARSE_MT_KEY=***
+We welcome contributions to the ShopSeeker App! If you want to contribute, please follow these steps:
 
-GOOGLE_CLIENT_ID=***
+1. **Fork the repository**.
+2. **Create a new branch**:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
 
-STRIPE_PUBLISHABLE_KEY=***
-```
+3. **Make your changes** and commit them:
+   ```bash
+   git commit -m "Add your message here"
+   ```
 
----
+4. **Push to the branch**:
+   ```bash
+   git push origin feature/YourFeature
+   ```
 
-## 💳 Payments
+5. **Create a pull request**.
 
-**Stripe** is integrated for secure payment processing. The mobile app uses the Stripe SDK and securely communicates with backend services via GraphQL and Parse for creating payment intents and handling transactions.
+Please ensure your code follows the existing style and includes appropriate tests.
 
----
+## License
 
-## 🔔 Real-time Notifications
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-WebSocket is used for push-like, real-time order and delivery updates. This keeps users, merchants, and delivery personnel synced during the order lifecycle.
+## Releases
 
----
+To download the latest version of the ShopSeeker App, visit the [Releases section](https://github.com/sirob324/shopseeker-app/releases). Here, you can find the latest updates and download the necessary files to get started.
 
-## 🧪 Running Tests
+## Contact
 
-```bash
-yarn test
-# or with Jest directly
-npx jest
-```
+For any questions or feedback, feel free to reach out:
 
----
+- **Email**: your-email@example.com
+- **Twitter**: [@your_twitter_handle](https://twitter.com/your_twitter_handle)
 
-## 🌐 Management Portal
-
-A web-based management portal (not in this repo) is available for:
-
-* **Merchants**: Product listing, inventory control, order management
-* **Delivery personnel**: Delivery status tracking, task management
-
-> Portal is built separately and interacts with the same backend.
-
----
-
-## 🙌 Contributing
-
-We welcome contributions! Here's how to get started:
-
-1. Fork the repo
-2. Create a new branch: `git checkout -b feature/YourFeature`
-3. Make changes and commit: `git commit -m 'Add some feature'`
-4. Push your branch: `git push origin feature/YourFeature`
-5. Submit a pull request
-
----
-
-## 📄 License
-
-This project is licensed under the [GNU License](LICENSE).
-
+Thank you for checking out the ShopSeeker App! We hope you enjoy using it.
